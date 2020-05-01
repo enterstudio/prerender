@@ -14,19 +14,23 @@
     "he": "^1.1.0",
     "lodash": "^4.14.1",
     "phridge": "^2.0.0",
-    "signal-exit": "^3.0.0"
+    "signal-exit": "^3.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "mocha": "^3.0.1",
     "sinon": "^1.17.5"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "prerender": "server.js"
   },
   "engines": {
     "node": ">=0.12.9"
-  }
+  },
+  "snyk": true
 }
